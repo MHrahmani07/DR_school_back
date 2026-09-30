@@ -1,0 +1,35 @@
+# --- هسته پروژه ---
+Django==5.1.4
+djangorestframework==3.15.2
+django-cors-headers==4.6.0
+
+# --- تنظیمات محیطی (.env) ---
+django-environ==0.11.2
+
+# --- فیلتر و جستجو در APIها (کلاس/پایه/بازه تاریخ) ---
+django-filter==24.3
+
+# --- احراز هویت با JWT (برای لاگین OTP/توکن) ---
+djangorestframework-simplejwt==5.3.1
+
+# --- صف کارهای پس‌زمینه (ارسال پیامک async) ---
+celery==5.4.0
+redis==5.2.1
+django-celery-beat==2.7.0
+django-celery-results==2.5.1
+
+# --- خروجی/ورودی اکسل ---
+openpyxl==3.1.5
+django-import-export==4.3.3
+
+# --- دیتابیس (در صورت استفاده از PostgreSQL برای production) ---
+psycopg2-binary==2.9.10
+
+# --- مستندسازی خودکار API (Swagger/OpenAPI) ---
+drf-spectacular==0.28.0
+
+# --- استقرار (Deploy) ---
+gunicorn==23.0.0
+whitenoise==6.8.2
+
+# --- ابزار توسعه 
