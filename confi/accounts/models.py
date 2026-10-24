@@ -7,7 +7,11 @@ class User(AbstractUser):
         ADMIN = 'admin', 'مدیر'
         DEPUTY = 'deputy', 'معاون'
 
-    role = models.CharField(max_length=10, choices=Role.choices, default=Role.DEPUTY)
+    role = models.CharField(
+        max_length=10, 
+        choices=Role.choices, 
+        default=Role.DEPUTY
+        )
     phone_number = models.CharField(max_length=15, blank=True)
 
     def is_admin(self):

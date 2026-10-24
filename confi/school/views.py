@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from rest_framework import generics
+from .models import GradeLevel
+from .serializers import GradeLevelSerializer
 
-# Create your views here.
+
+class GradeLevelListView(generics.ListAPIView):
+    queryset = GradeLevel.objects.all()
+    serializer_class = GradeLevelSerializer

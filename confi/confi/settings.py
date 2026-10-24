@@ -7,11 +7,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Initialize environ
 env = environ.Env(
-    DEBUG=(bool, False)
-)
+    DEBUG=(bool, False),)
 # Read .env file if it exists
-environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
-
+environ.Env.read_env(os.path.join(BASE_DIR, '.env.local'))
+DEBUG = env('DEBUG', default=True)
 SECRET_KEY = env('SECRET_KEY', default='django-insecure-default-key')
 
 
@@ -112,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # ==========================================
 # Internationalization
 # ==========================================
-LANGUAGE_CODE = 'fa-ir'
+LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'Asia/Tehran'
 USE_I18N = True
 USE_TZ = True
@@ -120,7 +119,7 @@ USE_TZ = True
 # ==========================================
 # Static and Media files
 # ==========================================
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 MEDIA_URL = 'media/'
