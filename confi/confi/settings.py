@@ -150,7 +150,7 @@ REST_FRAMEWORK = {
 # DRF Spectacular (Swagger)
 # ==========================================
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'Pazhohesh Gostar API',
+    'TITLE': 'Dr Gooshe API',
     'DESCRIPTION': 'School Attendance and Discipline Management System',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,

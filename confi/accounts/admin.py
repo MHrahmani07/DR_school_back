@@ -13,3 +13,12 @@ class CustomUserAdmin(UserAdmin):
         'phone_number',
         'is_active',
     )
+    list_filter = (
+        'role',
+        'is_staff',
+        'is_active'
+            )
+
+fieldsets = UserAdmin.fieldsets + (
+        ('نقش کاربر', {'fields': ('role',)}),
+    )
