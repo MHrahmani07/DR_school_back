@@ -9,6 +9,8 @@ urlpatterns = [
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
     path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
     path('api/school/', include('school.urls')),
+    path('api/records/', include('records.urls')),
+    path('api/notifications/', include('notifications.urls')),
 ]
 
 # این بخش فایل‌های CSS و JS ادمین را لود می‌کند
